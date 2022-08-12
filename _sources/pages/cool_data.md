@@ -31,6 +31,7 @@ I make no particular guarantees about the accuracy or availability of any of the
 * **Uber Movement**: data on UBER trips in different cities, updated over time. Good for cities?  Not?  Will it work?  Where? Try to figure it out! https://movement.uber.com/cities?lang=en-CA
 * **Cryptocurrencies (BitCoin, etc.)**: is it a fad? Is the next big thing? Draw your own conclusions instead of listening to your annoying cousin at Thanksgiving who won't stop talking about it!  https://coinmetrics.io/data-downloads/
   - >  The Coinbase API for developers is also pretty useful https://developers.coinbase.com/
+* **Fama-French Data Library**: do you like the Fama-French model?  What about huge amounts of factor and returns data?  OK, here you go:  https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html 
 
 
 ## Data repositories
