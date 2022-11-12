@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jonathan Graves",
+    "section": "",
+    "text": "Welcome to my GitHub Homepage!\nThis is a small repository to allow open access to some of my teaching and data curation resources. I’m slowly migrating and adding files to this, so keep an eye out.\nYou can email me at jonathan.graves@ubc.ca\n\n\n\n\n\n\nTip\n\n\n\n\nLooking for the COMET project? Or the repo?\nYou may also want to check out my online workshops\nOr my Quarto extensions!\nOr you can check out my faculty web-page"
+  },
+  {
+    "objectID": "pages/cool_data.html",
+    "href": "pages/cool_data.html",
+    "title": "Cool Data Resources",
+    "section": "",
+    "text": "Over time, I’ve been slowly collecting interesting datasets and places where datasets are located to help students locate or get inspired about data. Here is my current list - if you have suggestions, email me to add them at jonathan.graves@ubc.ca or submit an issue here!\nIf you’re searching for an idea, browse around and see if there’s a cool dataset you think might be fun to explore.\nOther Notes:"
+  },
+  {
+    "objectID": "pages/cool_data.html#x-clicky",
+    "href": "pages/cool_data.html#x-clicky",
+    "title": "Cool Data Resources",
+    "section": ":x clicky",
+    "text": ":x clicky\nJust like this!"
+  },
+  {
+    "objectID": "pages/cool_data.html#reference-sites",
+    "href": "pages/cool_data.html#reference-sites",
+    "title": "Cool Data Resources",
+    "section": "Reference Sites",
+    "text": "Reference Sites\n\nPro Football Reference (NFL) - http://www.pro-football-reference.com/\nBasketball Reference - NBA/WNBA - NBA/WNBA - http://www.basketball-reference.com/\n\nhttps://www.pbpstats.com/\nhttps://www.nba.com/stats\n\nHockey Reference (NHL) - http://www.hockey-reference.com/\nFootball Reference (Soccer) - http://fbref.com/"
+  },
+  {
+    "objectID": "pages/cool_data.html#baseball",
+    "href": "pages/cool_data.html#baseball",
+    "title": "Cool Data Resources",
+    "section": "Baseball",
+    "text": "Baseball\n\nRetrosheet: literally every single baseball play and event since 1915. https://www.retrosheet.org/game.htm\n\nIt is painful and ancient, but new generations must suffer!\n\n☆ Fangraphs - Baseball: your single source for all stats baseball. https://www.fangraphs.com/\n\n:Comment from JS\n\nBaseball Savant: very detailed, MLB-sourced data on raw stats. https://baseballsavant.mlb.com/\n\n:Comment from JS\n\nBaseball Reference: a more modern version of Retrosheet, without the suffering. Historical data. https://www.baseball-reference.com/\n\n:Comment from JS\n\nbaseballr: you know it exists. A baseball data API, pulling from most of the above. There’s also a Python version. https://billpetti.github.io/baseballr/\n\n:Comment from JS"
+  },
+  {
+    "objectID": "pages/cool_data.html#r-packages-for-sports",
+    "href": "pages/cool_data.html#r-packages-for-sports",
+    "title": "Cool Data Resources",
+    "section": "R-packages for Sports",
+    "text": "R-packages for Sports\n\ncfbfastR - College Football - https://github.com/sportsdataverse/cfbfastR\nhoopR - NBA - https://github.com/sportsdataverse/hoopR\nwehoop - WNBA/NCAA Womens - https://github.com/sportsdataverse/wehoop\nsportyR - Visualization Package - https://github.com/sportsdataverse/sportyR\nchessR - Chess - https://github.com/jaseziv/chessR/\nfastRhockey - NHL/PHF - https://github.com/sportsdataverse/fastRhockey\nworldfootballR - International Football (Soccer) - https://github.com/jaseziv/worldfootballR/\n\n\nSomeone who knows about cricket or American football make me some suggestions!\n\nThere are many more options out there, so keep your eyes open!"
+  },
+  {
+    "objectID": "pages/cool_data.html#x-comment1",
+    "href": "pages/cool_data.html#x-comment1",
+    "title": "Cool Data Resources",
+    "section": ":x comment1",
+    "text": ":x comment1\nI can’t express how much I love this website. I’ve spent hundreds of hours browsing it, and it’s perfect in nearly every way. I wouldn’t be enrolled in this class right now without Fangraphs, and I say that with absolute certainty. In terms of its function, it’s a one stop shop for all things Sabermetrics - from basic stats like Retrosheet, to hyper advanced ones, to articles, to projection models, to scouting, to community research. This website is the backbone of the analytically inclined baseball community. - JS"
+  },
+  {
+    "objectID": "pages/cool_data.html#x-comment2",
+    "href": "pages/cool_data.html#x-comment2",
+    "title": "Cool Data Resources",
+    "section": ":x comment2",
+    "text": ":x comment2\nBaseball Savant is a MLB run site dedicated to Statcast, an initiative introduced in 2015 to collect data from every action that takes place on the field through the lenses of around a dozen high frame rate cameras (75-300fps). Compared to FanGraphs, which is primarily calculated metrics from in-game results, all Statcast metrics have a level of rawness to them. Instead of ERA, you will find average exit velocity and launch angle. - JS"
+  },
+  {
+    "objectID": "pages/cool_data.html#x-comment3",
+    "href": "pages/cool_data.html#x-comment3",
+    "title": "Cool Data Resources",
+    "section": ":x comment3",
+    "text": ":x comment3\nBaseball Reference is essentially the 2022 version of Retrosheet. For those who are more interested in historical research, this is the best option available. - JS"
+  },
+  {
+    "objectID": "pages/cool_data.html#x-comment4",
+    "href": "pages/cool_data.html#x-comment4",
+    "title": "Cool Data Resources",
+    "section": ":x comment4",
+    "text": ":x comment4\nWhen it comes to running more intensive data analysis, I prefer to utilize this API package to receive data. It is directly linked to Statcast data, as well as FanGraphs, which makes it super easy. Also, to my understanding this (and a similar package for Python) are the only methods of retrieving raw play-by-play statcast data, which is necessary in creating advanced models - JS"
+  }
+]
