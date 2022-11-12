@@ -1,0 +1,29 @@
+---
+title: Jonathan Graves
+about:
+  template: jolla
+  image: media/profile.png
+  links:
+  - icon: book
+    text: UBC Website
+    href: https://jonathanlgraves.arts.ubc.ca/
+  - icon: github
+    text: GitHub
+    href: https://github.com/jlgraves-ubc/
+---
+
+
+# Welcome to my GitHub Homepage!
+
+This is a small repository to allow open access to some of my teaching and data curation resources.  I'm slowly migrating and adding files to this, so keep an eye out.
+
+You can email me at [jonathan.graves@ubc.ca](jonathan.graves@ubc.ca)
+
+::: {.callout-tip .align-left}
+
+* Looking for the [COMET project](https://comet.arts.ubc.ca/)?  Or the [repo](https://github.com/ubcecon/comet-project)?
+* You may also want to check out my [online workshops](https://github.com/jlgraves-ubc/workshops)
+* Or my [Quarto extensions](https://github.com/jlgraves-ubc/forms)!
+* Or you can check out my [faculty web-page](https://jonathanlgraves.arts.ubc.ca/)
+
+:::

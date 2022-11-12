@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Jonathan Graves - GitHub"
+  repo-url: https://github.com/jlgraves-ubc/
+  repo-actions: [issue]
+  body-footer: ""
+  twitter-card: true
+  description: "Personal website for Jonathan's GitHub projects and other miscellaneous stuff"
+  navbar:
+    right:
+      - text: About
+        file: index.qmd
+      - icon: book
+        href: https://jonathanlgraves.arts.ubc.ca/
+    left:
+    - text: Resources
+      menu: 
+      - file: pages/cool_data.qmd
+
+  page-footer: 
+    right:
+      - text: UBC Vancouver is situated in the traditional, ancestral and unceded territory of the xʷməθkʷəy̓əm (Musqueam)
+
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    css: styles.css
+    page-layout: full
+    code-copy: true
+    footnotes-hover: true
+    lang: en-GB
+    keywords: Jonathan Graves, resources, UBC, learning, research, GitHub
+
+
+
+
