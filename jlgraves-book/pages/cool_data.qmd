@@ -62,6 +62,11 @@ Just like this!
 * ☆ Literally what the URL says (be sure to check license and copyright, though) <https://www.cooldatasets.com/>
 * ☆ **Amazon's AWS**:  gigantic (literally) collection of Amazon data on every concievable topic relevant for learning about the world.  Mostly designed for machine learning purposes, but maybe you can find something interesting before our robot overlords do?  <https://aws.amazon.com/public-datasets/>
 
+# Demographic and Microeconomic
+
+* **PUMF**: the Statistics Canada Public use microdata is all on Abacus, above.  This is dozens of detail microdatasets.  See the [directory](https://www.statcan.gc.ca/en/microdata/pumf).
+* **KEEP**: the Korean Education & Employment Panel Survey, a large panel dataset of nationally representative Koreans from childhood, and their vocational outcomes.  Very rich! <https://www.krivet.re.kr/eng/eu/eg/euCAADs.jsp>
+
 # Geospatial and City-specific Data
 
 * **New York City's Open Data**: all you wanted to know about New York!  Match it up with the Yelp Data?  Find the best pizza joint?  <https://opendata.cityofnewyork.us/>
