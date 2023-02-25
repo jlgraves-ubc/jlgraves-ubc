@@ -68,5 +68,208 @@
     "title": "Cool Data Resources",
     "section": ":x comment4",
     "text": ":x comment4\nWhen it comes to running more intensive data analysis, I prefer to utilize this API package to receive data. It is directly linked to Statcast data, as well as FanGraphs, which makes it super easy. Also, to my understanding this (and a similar package for Python) are the only methods of retrieving raw play-by-play statcast data, which is necessary in creating advanced models - JS"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#replicability-in-economics",
+    "href": "pages/replicable/replicable_research_slides.html#replicability-in-economics",
+    "title": "Replicable Research in Economics",
+    "section": "Replicability in Economics",
+    "text": "Replicability in Economics\nAs Ioannidis (2005) argues, most research findings are false.\n\nFlexibility in research findings leads to numerous false positives.\nPublication bias means many papers never see the light of day (Franco, Malhotra, and Simonovits (2014)), overstating and contaminating meta-analyses.\n\nThis has led to the replication crisis in many fields (esp. social psychology) in which seemings well-established results just… aren’t true."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#economics-is-not-immune",
+    "href": "pages/replicable/replicable_research_slides.html#economics-is-not-immune",
+    "title": "Replicable Research in Economics",
+    "section": "Economics is not Immune",
+    "text": "Economics is not Immune\n\nFigure 1 from Brodeur et al. (2016)"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#reasons-for-non-replication",
+    "href": "pages/replicable/replicable_research_slides.html#reasons-for-non-replication",
+    "title": "Replicable Research in Economics",
+    "section": "Reasons for Non-Replication",
+    "text": "Reasons for Non-Replication\nThis is not (usually) malfeasance on the part of a research. It’s just bad practice, and a lack of transparency.\n\nNot keeping track of code and data sources in sufficient detail\nSoftware versions changing or packages no longer being available\nInsufficient detail in code about analyses performed in drawing results\nChanges to underlying raw data (e.g., BLS Adjustments)\n\nAs Christensen and Miguel (2018) argues, this is a solvable problem with better research practices."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#why-replicable",
+    "href": "pages/replicable/replicable_research_slides.html#why-replicable",
+    "title": "Replicable Research in Economics",
+    "section": "Why Replicable?",
+    "text": "Why Replicable?\nOne part of the solution is replicable research workflows. The key benefits:\n\nTransparent, reproducible results and research outputs\nEasy to detect errors and correct mistakes\nEasy to share results with co-authors and colleagues\nMore likely to get published, even with null results\n\nKey Drawback: more work if not executed properly.\n\nThis presentation: tips on how to make this part of your workflow, and eliminate the drawback."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#the-replicable-workflow",
+    "href": "pages/replicable/replicable_research_slides.html#the-replicable-workflow",
+    "title": "Replicable Research in Economics",
+    "section": "The Replicable Workflow",
+    "text": "The Replicable Workflow\n\n\n\n\n \nflowchart LR\n    A[(Raw Data)] --> B[Data Clean-up] \n    B --> C{Analysis}\n    C --> D(Main Results) --- P>Paper]\n    C --> E(Appendix Results)\n    E --- Q>Appendices]\n\n\n\n\n\n\n\n\nEach step here should be documented and replicable."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#what-is-environment-management",
+    "href": "pages/replicable/replicable_research_slides.html#what-is-environment-management",
+    "title": "Replicable Research in Economics",
+    "section": "What is Environment Management?",
+    "text": "What is Environment Management?\nOne key issue is making sure you can easily re-create all of the tools (software) you need to do an analysis.\n\nThis is challenging, since software is constantly changing.\nIf you just install R or Python on your computer:\n\nWhich version? Which packages?\n\n\nMoreover, you might install something else which breaks something you need (e.g., LaTeX)\n\nA key solution is environment management."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#key-benefits",
+    "href": "pages/replicable/replicable_research_slides.html#key-benefits",
+    "title": "Replicable Research in Economics",
+    "section": "Key Benefits?",
+    "text": "Key Benefits?\nA environment is a virtualized computational environment with defined properties which are tracked.\n\nThink of it like a computer-within-a-computer.\n\nThe key benefits are that:\n\nYou know exactly what is in the environment, and can restore, update, and revert it as needed\nYour environment is isolated from the rest of your PC and other environments. Installing a new package will not affect anything outside of the environment."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#options",
+    "href": "pages/replicable/replicable_research_slides.html#options",
+    "title": "Replicable Research in Economics",
+    "section": "Options",
+    "text": "Options\nThere are many environment managers out there. The most popular is Anaconda (conda).\n\nSome software also has specific package managers which can be installed within conda\nFor example, if you use R, the renv package manages R packages.\n\nFor Python, the venv module is similar to conda; you shouldn’t mix and match them."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#installing-conda",
+    "href": "pages/replicable/replicable_research_slides.html#installing-conda",
+    "title": "Replicable Research in Economics",
+    "section": "Installing conda",
+    "text": "Installing conda\nYou can install conda from their website, for the UI (which is awful)\n\nI prefer Miniconda, which is a very lightweight no-UI solution\n\nhttps://docs.conda.io/en/latest/miniconda.html\nMy rationale is that if you’re using conda you need to be at least a little comfortable with the command line."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#conda-concepts",
+    "href": "pages/replicable/replicable_research_slides.html#conda-concepts",
+    "title": "Replicable Research in Economics",
+    "section": "conda Concepts",
+    "text": "conda Concepts\nIn conda, you create virtual environments into which you can install software.\n\nAn environment is a virtualized space for software\nSoftware is installed using conda via a package manager\nPackages come from channels which are online repositories hosted by Anaconda or the community (or you!)\nYou activate environments to switch into them and then launch software from inside them"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#key-conda-commands",
+    "href": "pages/replicable/replicable_research_slides.html#key-conda-commands",
+    "title": "Replicable Research in Economics",
+    "section": "Key conda Commands",
+    "text": "Key conda Commands\n\nconda create --name MYENV\n\nMake a new, empty, environment\n\nconda activate MYENV\n\nSwitch into MYENV\n\nconda install -c conda-forge PACKAGE\n\nInstall a new package\n\nconda info --envs\n\nHelp I forgot the name of my environment\n\nconda list --revisions then conda install --rev 8\n\nI want to go back to revision 8"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#example-a-simple-r-workflow",
+    "href": "pages/replicable/replicable_research_slides.html#example-a-simple-r-workflow",
+    "title": "Replicable Research in Economics",
+    "section": "Example: A Simple R Workflow",
+    "text": "Example: A Simple R Workflow\nconda create --name R-env\nconda activate R-env\nconda install -c conda-forge r-essentials\nconda install -c r rstudio\nconda run rstudio\nIf you have an external IDE (like RStudio or VSCode) you will also be able to see the R-env environment as one way to “run” R"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#sharing-conda-environments",
+    "href": "pages/replicable/replicable_research_slides.html#sharing-conda-environments",
+    "title": "Replicable Research in Economics",
+    "section": "Sharing conda Environments",
+    "text": "Sharing conda Environments\nOkay, you’ve done a bunch of stuff. You want to send your code and workflow to your PI. How do you do that?\nconda activate R-env\nconda env export > r-environment.yml\nThen on the other computer, you just do:\nconda env create -f r-environment.yml"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#pitfalls-and-problems",
+    "href": "pages/replicable/replicable_research_slides.html#pitfalls-and-problems",
+    "title": "Replicable Research in Economics",
+    "section": "Pitfalls and Problems",
+    "text": "Pitfalls and Problems\nA key issue is when you need a package or software that isn’t available via conda install.\n\nIf it’s a local package (e.g. as in R), you can look into a specific local manager (like renv)\nYou can create and publish your own package (neat but hard)\n\nUsually best to install using curl from a specific version and then just save that information."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#but-i-hate-the-command-line",
+    "href": "pages/replicable/replicable_research_slides.html#but-i-hate-the-command-line",
+    "title": "Replicable Research in Economics",
+    "section": "But I hate the command line 😭",
+    "text": "But I hate the command line 😭\nI know, it sucks. Write a short bash script to launch all the stuff you want in your project folder instead. No more scary command line.\n\nHere’s how to do it: https://comet.arts.ubc.ca/pages/installing_locally.html"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#what-is-git",
+    "href": "pages/replicable/replicable_research_slides.html#what-is-git",
+    "title": "Replicable Research in Economics",
+    "section": "What is git?",
+    "text": "What is git?\nIf conda manages software what manages files or data? The answer: git and version control.\n\ngit is a version control system which was developed by Linus Torvalds for use with Linux\nIt is a distributed system, which makes it ideal for large project and collaboration\n\nIt keeps track of the changes made to files. While there are other options (e.g., Mercurial) git is by far the most popular and adopted."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#key-pros-and-cons",
+    "href": "pages/replicable/replicable_research_slides.html#key-pros-and-cons",
+    "title": "Replicable Research in Economics",
+    "section": "Key Pros and Cons?",
+    "text": "Key Pros and Cons?\n\n\nPros\n\nKeeps track of changes\nRestores old changes\nAllows easy sharing\nIntegrates with cloud deployment\nGitHub\n\n\nCons\n\nLinus Torvalds\nComplex\nOverwhelming at first\nMany software choices\nCommand line"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#easy-to-use",
+    "href": "pages/replicable/replicable_research_slides.html#easy-to-use",
+    "title": "Replicable Research in Economics",
+    "section": "“Easy” to Use",
+    "text": "“Easy” to Use\nFortunately, unless you are working on large projects with lots of co-authors, the basic git workflow is actually easy to use.\n\nYou can also install GUIs which make this easier: two popular options are Github Desktop and GitKraken\n\nThe benefits of git are similar to LaTeX: it has a learning curve, but once you get the hang on it, everything will else will seem inferior and wrong."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#git-concepts-and-terminology",
+    "href": "pages/replicable/replicable_research_slides.html#git-concepts-and-terminology",
+    "title": "Replicable Research in Economics",
+    "section": "git Concepts and Terminology",
+    "text": "git Concepts and Terminology\nIn git, there are many new concepts:\n\nA repository is a collection of files, including a complete history of those files and their changes.\nA commit is a revision made to a repository: it is the basic unit of tracking. You stage files to be committed.\nA remote is a repository which lives on another computer; a local is one on your computer, usually cloned from it.\nA fork refers to a copy of a remote, which lives independently, but shares history\nA branch is a version of a repository, main is the “original” or “main” one.\nA merge combines two branches\nA pull brings changes from a remote to a local; a push does the opposite."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#basic-idea",
+    "href": "pages/replicable/replicable_research_slides.html#basic-idea",
+    "title": "Replicable Research in Economics",
+    "section": "Basic Idea",
+    "text": "Basic Idea\nI am working with my colleague on a project. We store all our stuff on a private GitHub remote.\n\nI clone her remote repository, to start working locally.\nI create a new branch to store my changes. I make some changes.\n\nI want her to check out my changes, so I stage the ones for review and commit them to the branch.\nI push the branch to the remote, so she can see it. She pulls my branch and looks at the changes. She makes some edits and commits them.\nI pull her edits. We agree things are good. I pull the main branch again, then merge my branch with it.\nI push my updated main branch, and delete my old branch.\n\nWe just worked on a project together!"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#installing-git",
+    "href": "pages/replicable/replicable_research_slides.html#installing-git",
+    "title": "Replicable Research in Economics",
+    "section": "Installing git",
+    "text": "Installing git\nYou can install git from the website:\n\nhttps://git-scm.com/book/en/v2/Getting-Started-Installing-Git\n\nThis will give you the software and a Linux-based command-like tool (git bash) and a simple GUI (git gui). You can install other software now:\n\nGitHub Desktop: https://desktop.github.com/\nGitKraken: https://www.gitkraken.com/"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-1-cloning-and-branching",
+    "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-1-cloning-and-branching",
+    "title": "Replicable Research in Economics",
+    "section": "git Workflow Part 1: Cloning and Branching",
+    "text": "git Workflow Part 1: Cloning and Branching\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  merge my_work\n  commit"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-2-staging-and-committing",
+    "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-2-staging-and-committing",
+    "title": "Replicable Research in Economics",
+    "section": "git Workflow Part 2: Staging and Committing",
+    "text": "git Workflow Part 2: Staging and Committing\nA bundle of changes to files is called a commit (git commit). You can select only some files by staging them, which is easiest in a GUI.\n\nA commit will create a diff which are the changes made to a file. Check this out! It’s very helpful.\nYou can collect all the changes you want to “finalize” by staging or unstaging the files, then commit them\nAll commits need a title, and can have comments; use this to help find stuff later\n\nYou shouldn’t commit things every time you save a file. Only commit stuff that you want to mark as a point to go back to; usually after you’ve done some stuff, or hit a milestone."
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-3-pulling-merging-and-pushing",
+    "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-3-pulling-merging-and-pushing",
+    "title": "Replicable Research in Economics",
+    "section": "git Workflow Part 3: Pulling, Merging, and Pushing",
+    "text": "git Workflow Part 3: Pulling, Merging, and Pushing\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  commit\n  checkout my_work\n  merge main\n  commit\n  checkout main\n  merge my_work\n  commit\n  checkout my_work\n  commit"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-4-f-ing-it-up",
+    "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-4-f-ing-it-up",
+    "title": "Replicable Research in Economics",
+    "section": "git Workflow Part 4: F-ing it Up",
+    "text": "git Workflow Part 4: F-ing it Up\n\nGit is hard: messing up is easy, and figuring out how to fix your mistakes is impossible. Git documentation has this chicken and egg problem where you can’t search for how to get yourself out of a mess, unless you already know the name of the thing you need to know about in order to fix your problem. (Katie Sylor-Miller)\n\nhttps://dangitgit.com/en"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#key-pitfalls",
+    "href": "pages/replicable/replicable_research_slides.html#key-pitfalls",
+    "title": "Replicable Research in Economics",
+    "section": "Key Pitfalls",
+    "text": "Key Pitfalls\n\nWatch out for binary files such as large images or compiled programs.\n\nBinaries, by their very nature, cannot form simple diffs which means if they are included in a git repo they can increase its size exponentially\nA solution is to use the git Large File Storage system instead (https://git-lfs.com/)\n\nWatch out for accidentally committing sensitive material, since it is stored in the history of the repo.\n\nA solution is the BFG Repo Cleaner https://rtyley.github.io/bfg-repo-cleaner/"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#integrating-workflows",
+    "href": "pages/replicable/replicable_research_slides.html#integrating-workflows",
+    "title": "Replicable Research in Economics",
+    "section": "Integrating Workflows",
+    "text": "Integrating Workflows\nAt this point, you have an idea of how to make your work completely reproducible.\n\nYou have control of the software and the files/data\nWhat about hardware?\n\nConceptually, this should not matter: but sometimes it does1\n\nThe solution is to use continuous integration and continuous deployment tools to build and produce all of your work in the cloud.\n\nEvery wonder why as.factor and as_factor exist in R?"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#server-deployment",
+    "href": "pages/replicable/replicable_research_slides.html#server-deployment",
+    "title": "Replicable Research in Economics",
+    "section": "Server Deployment",
+    "text": "Server Deployment\nTo do this, you need a server - but fortunately, GitHub and GitLab exist, and are free.\n\nYou can set up a script which pulls a defined image of a software and virtual computer, loads or creates your environment, clones your repo, and then builds your project all in the cloud.\nThis is the highest level of reproducibility - it’s not even hard.\nFor example, here’s how to build LaTeX documents in GitHub: https://github.com/marketplace/actions/github-action-for-latex\nOverleaf even synchronizes with this too: https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub"
+  },
+  {
+    "objectID": "pages/replicable/replicable_research_slides.html#references",
+    "href": "pages/replicable/replicable_research_slides.html#references",
+    "title": "Replicable Research in Economics",
+    "section": "References",
+    "text": "References\n\n\n\n\n\n\n\n\n\nBrodeur, Abel, Mathias Lé, Marc Sangnier, and Yanos Zylberberg. 2016. “Star Wars: The Empirics Strike Back.” American Economic Journal: Applied Economics 8 (1): 1–32.\n\n\nChristensen, Garret, and Edward Miguel. 2018. “Transparency, Reproducibility, and the Credibility of Economics Research.” Journal of Economic Literature 56 (3): 920–80.\n\n\nFranco, Annie, Neil Malhotra, and Gabor Simonovits. 2014. “Publication Bias in the Social Sciences: Unlocking the File Drawer.” Science 345 (6203): 1502–5.\n\n\nIoannidis, John PA. 2005. “Why Most Published Research Findings Are False.” PLoS Medicine 2 (8): e124."
   }
 ]
