@@ -19,6 +19,7 @@ website:
     - text: Resources
       menu: 
       - file: pages/cool_data.qmd
+      - file: pages/replicable/replicable_research_slides.qmd
 
   page-footer: 
     right:

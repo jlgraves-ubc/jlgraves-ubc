@@ -66,6 +66,10 @@ Just like this!
 
 * **PUMF**: the Statistics Canada Public use microdata is all on Abacus, above.  This is dozens of detail microdatasets.  See the [directory](https://www.statcan.gc.ca/en/microdata/pumf).
 * **KEEP**: the Korean Education & Employment Panel Survey, a large panel dataset of nationally representative Koreans from childhood, and their vocational outcomes.  Very rich! <https://www.krivet.re.kr/eng/eu/eg/euCAADs.jsp>
+* **American Community Survey (ACS)**: one of the most valuable US Census Bureau products, the ACS is available at both household and individual, with 5% microdata samples available at both the 1 year and 5 year levels. <https://www.census.gov/programs-surveys/acs/microdata/access.html>
+  * There are two formats available on their direct download site (SAS and `csv`) and a data picker if you know what you already want.  The data is also available in aggregate national and state-level forms.
+  * You can find [https://www.census.gov/programs-surveys.html](all Census data products here)
+  * See also the R `acs` package: <https://cran.r-project.org/web/packages/acs/acs.pdf>
 
 # Geospatial and City-specific Data
 

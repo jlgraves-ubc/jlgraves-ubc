@@ -1,0 +1,361 @@
+---
+title: Replicable Research in Economics
+date: "2023-03-03"
+author: Jonathan L. Graves
+bibliography: references.bib
+toc-depth: 1
+format: 
+  revealjs:
+    toc: true
+---
+
+# Replicability in Research
+
+## Replicability in Economics
+
+As @ioannidis2005most argues, most research findings are false.
+
+* Flexibility in research findings leads to numerous false positives.
+* **Publication bias** means many papers never see the light of day (@franco2014publication), overstating and contaminating meta-analyses.
+
+This has led to the **replication crisis** in many fields (esp. social psychology) in which seemings well-established results just... aren't true.
+
+---
+
+!["Dark Statistics"](media/dark_stats.JPG)
+
+
+## Economics is not Immune
+
+![Figure 1 from @brodeur2016star](media/z-scores.png)
+
+---
+
+![Replication as of 23-02-2023 on the [SSRP](https://www.socialsciencereproduction.org/)](media/ssrm.png)
+
+## Reasons for Non-Replication
+
+This is not (usually) malfeasance on the part of a research.  It's just bad practice, and a lack of transparency.
+
+* Not keeping track of code and data sources in sufficient detail
+* Software versions changing or packages no longer being available
+* Insufficient detail in code about analyses performed in drawing results
+* Changes to underlying raw data (e.g., BLS Adjustments)
+
+As @christensen2018transparency argues, this is a _solvable_ problem with better research practices.
+
+## Why Replicable?
+
+One part of the solution is _replicable research workflows_.  The key benefits:
+
+1.  Transparent, reproducible results and research outputs
+2.  Easy to detect errors and correct mistakes
+3.  Easy to share results with co-authors and colleagues
+4.  More likely to get published, even with null results
+
+**Key Drawback**: more work _if_ not executed properly.  
+
+. . .
+
+This presentation: tips on how to make this part of your workflow, and eliminate the drawback.
+
+## The Replicable Workflow
+
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 6
+ 
+flowchart LR
+    A[(Raw Data)] --> B[Data Clean-up] 
+    B --> C{Analysis}
+    C --> D(Main Results) --- P>Paper]
+    C --> E(Appendix Results)
+    E --- Q>Appendices]
+```
+
+Each step here should be documented and replicable.
+
+
+# Environment Management and `conda`
+
+## What is Environment Management?
+
+One key issue is making sure you can easily re-create all of the tools (software) you need to do an analysis.
+
+* This is challenging, since software is constantly changing.
+* If you just install R or Python on your computer:
+  - Which version?  Which packages?  
+* Moreover, you might install something else which breaks something you need (e.g., LaTeX)
+
+A key solution is **environment management**.
+
+## Key Benefits?
+
+A **environment** is a virtualized computational environment with defined properties which are tracked.
+
+* Think of it like a computer-within-a-computer.
+
+The key benefits are that:
+
+1.  You know *exactly* what is in the environment, and can restore, update, and revert it as needed
+2.  Your environment is *isolated* from the rest of your PC and other environments.  Installing a new package will not affect anything outside of the environment.
+
+## Options
+
+There are many environment managers out there.  The most popular is Anaconda (`conda`).
+
+* Some software also has specific _package_ managers which can be installed _within_ `conda`
+* For example, if you use R, the `renv` package manages R packages.
+
+For Python, the `venv` module is similar to `conda`; you shouldn't mix and match them.
+
+## Installing `conda`
+
+You can install `conda` from their website, for the UI (which is awful)
+
+* I prefer Miniconda, which is a very lightweight no-UI solution 
+
+<https://docs.conda.io/en/latest/miniconda.html>
+
+My rationale is that if you're using `conda` you need to be at least a little comfortable with the command line.
+
+## `conda` Concepts
+
+In `conda`, you create virtual environments into which you can install software.
+
+* An **environment** is a virtualized space for software
+* Software is installed using `conda` via a **package manager**
+* Packages come from **channels** which are online repositories hosted by Anaconda or the community (or you!)
+* You **activate** environments to switch into them and then launch software from inside them
+
+## Key `conda` Commands
+
+* `conda create --name MYENV`
+  * Make a new, empty, environment
+* `conda activate MYENV`
+  * Switch into `MYENV`
+* `conda install -c conda-forge PACKAGE`
+  * Install a new package
+* `conda info --envs`
+  * Help I forgot the name of my environment
+* `conda list --revisions` then `conda install --rev 8`
+  * I want to go back to revision 8
+
+## Example: A Simple R Workflow
+
+```
+conda create --name R-env
+conda activate R-env
+conda install -c conda-forge r-essentials
+conda install -c r rstudio
+conda run rstudio
+```
+
+If you have an external IDE (like RStudio or VSCode) you will also be able to see the `R-env` environment as one way to "run" R
+
+## Sharing `conda` Environments
+
+Okay, you've done a bunch of stuff.  You want to send your code and workflow to your PI.  How do you do that?
+
+```
+conda activate R-env
+conda env export > r-environment.yml
+```
+
+Then on the other computer, you just do:
+
+```
+conda env create -f r-environment.yml
+```
+
+## Pitfalls and Problems
+
+A key issue is when you need a package or software that isn't available via `conda install`.
+
+* If it's a local package (e.g. as in R), you can look into a specific _local_ manager (like `renv`)
+* You can create and publish your own package (neat but hard)
+
+Usually best to install using `curl` from a _specific version_ and then just save that information.
+
+## But I hate the command line 😭
+
+I know, it sucks.  Write a short `bash` script to launch all the stuff you want in your project folder instead.  No more scary command line.
+
+* Here's how to do it: <https://comet.arts.ubc.ca/pages/installing_locally.html>
+
+# Version Management and `git`
+
+## What is `git`?
+
+If `conda` manages _software_ what manages _files or data_?  The answer: `git` and version control.
+
+* `git` is a **version control** system which was developed by Linus Torvalds for use with Linux
+* It is a **distributed** system, which makes it ideal for large project and collaboration
+
+It keeps track of the changes made to files.  While there are other options (e.g., Mercurial) `git` is _by far_ the most popular and adopted.
+
+## Key Pros and Cons?
+
+::: {.columns}
+::: {.column width="50%"}
+**Pros**
+
+* Keeps track of changes
+* Restores old changes
+* Allows easy sharing
+* Integrates with cloud deployment
+* GitHub
+:::
+
+::: {.column width="50%"}
+**Cons**
+
+* Linus Torvalds
+* Complex
+* Overwhelming at first
+* Many software choices
+* Command line
+
+:::
+:::
+
+## "Easy" to Use
+
+Fortunately, unless you are working on large projects with lots of co-authors, the basic `git` workflow is actually easy to use.
+
+* You can also install GUIs which make this easier: two popular options are **Github Desktop** and **GitKraken**
+
+The benefits of `git` are similar to LaTeX: it has a learning curve, but once you get the hang on it, everything will else will seem inferior and wrong.
+
+## `git` Concepts and Terminology {.smaller}
+
+In `git`, there are many new concepts:
+
+* A **repository** is a collection of files, including a complete history of those files and their changes.
+* A **commit** is a revision made to a repository: it is the basic unit of tracking.  You **stage** files to be committed.
+* A **remote** is a repository which lives on another computer; a **local** is one on your computer, usually **cloned** from it.
+* A **fork** refers to a copy of a remote, which lives independently, but shares history
+* A **branch** is a version of a repository, `main` is the "original" or "main" one.
+* A **merge** combines two branches
+* A **pull** brings changes from a remote to a local; a **push** does the opposite.
+
+## Basic Idea {.smaller}
+
+I am working with my colleague on a project.  We store all our stuff on a private GitHub **remote**.
+
+* I **clone** her remote repository, to start working locally.
+* I create a new **branch** to store my changes.  I make some changes.  
+* I want her to check out my changes, so I **stage** the ones for review and **commit** them to the branch.
+* I **push** the branch to the remote, so she can see it.  She **pulls** my branch and looks at the changes.  She makes some edits and **commits** them.
+* I **pull** her edits.  We agree things are good.  I **pull** the main branch again, then **merge** my branch with it.
+* I **push** my updated main branch, and delete my old branch.
+
+We just worked on a project together!
+
+## Installing `git`
+
+You can install `git` from the website:
+
+* <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
+
+This will give you the software and a Linux-based command-like tool (`git bash`) and a simple GUI (`git gui`).  You can install other software now:
+
+* GitHub Desktop: <https://desktop.github.com/>
+* GitKraken: <https://www.gitkraken.com/>
+
+## `git` Workflow Part 1: Cloning and Branching
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 6
+
+gitGraph
+  commit tag: "clone"
+  branch my_work
+  commit
+  commit
+  checkout main
+  merge my_work
+  commit
+```
+
+
+## `git` Workflow Part 2: Staging and Committing
+
+A bundle of changes to files is called a **commit** (`git commit`).  You can select only some files by **staging** them, which is easiest in a GUI.
+
+* A commit will create a *diff* which are the changes made to a file.  Check this out!  It's very helpful.
+* You can collect all the changes you want to "finalize" by staging or unstaging the files, then commit them
+* All commits need a title, and can have comments; use this to help find stuff later
+
+You _shouldn't_ commit things every time you save a file.  Only commit stuff that you want to mark as a point to go back to; usually after you've done some stuff, or hit a milestone.  
+
+## `git` Workflow Part 3: Pulling, Merging, and Pushing
+
+
+```{mermaid}
+%%| fig-width: 10
+%%| fig-height: 6
+
+gitGraph
+  commit tag: "clone"
+  branch my_work
+  commit
+  commit
+  checkout main
+  commit
+  checkout my_work
+  merge main
+  commit
+  checkout main
+  merge my_work
+  commit
+  checkout my_work
+  commit
+```
+
+## `git` Workflow Part 4: F-ing it Up
+
+> Git is hard: messing up is easy, and figuring out how to fix your mistakes is impossible. Git documentation has this chicken and egg problem where you can't search for how to get yourself out of a mess, _unless you already know the name of the thing you need to know about_ in order to fix your problem. (Katie Sylor-Miller)
+
+<https://dangitgit.com/en>
+
+## Key Pitfalls
+
+* Watch out for **binary files** such as large images or compiled programs.
+  * Binaries, by their very nature, cannot form simple _diffs_ which means if they are included in a `git` repo they can increase its size exponentially
+  * A solution is to use the `git` Large File Storage system instead (<https://git-lfs.com/>)
+* Watch out for accidentally committing sensitive material, since it is stored in the history of the repo.
+  * A solution is the BFG Repo Cleaner <https://rtyley.github.io/bfg-repo-cleaner/>
+
+# Fully Replicable Research: CI-CD
+
+## Integrating Workflows
+
+At this point, you have an idea of how to make your work completely reproducible.
+
+* You have control of the _software_ and the _files/data_
+* What about **hardware**?
+
+Conceptually, this should not matter: _but_ sometimes it does^[Every wonder why `as.factor` and `as_factor` exist in R?]
+
+* The solution is to use **continuous integration and continuous deployment** tools to build and produce all of your work in the cloud.
+
+## Server Deployment
+
+To do this, you need a server - but fortunately, GitHub and GitLab exist, and are free.
+
+* You can set up a script which pulls a defined **image** of a software and virtual computer, loads or creates your environment, clones your repo, and then **builds your project** all in the cloud.
+* This is the highest level of reproducibility - it's not even hard.
+
+* For example, here's how to build LaTeX documents in GitHub: <https://github.com/marketplace/actions/github-action-for-latex>
+* Overleaf even synchronizes with this too: <https://www.overleaf.com/learn/how-to/Using_Git_and_GitHub>
+
+## References
+
+::: {.references}
+:::
+
+
+
