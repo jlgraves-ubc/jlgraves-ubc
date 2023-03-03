@@ -33,7 +33,7 @@ This has led to the **replication crisis** in many fields (esp. social psycholog
 
 ![Replication as of 23-02-2023 on the [SSRP](https://www.socialsciencereproduction.org/)](media/ssrm.png)
 
-## Reasons for Non-Replication
+## Reasons for Non-Replication {.smaller}
 
 This is not (usually) malfeasance on the part of a research.  It's just bad practice, and a lack of transparency.
 
@@ -59,12 +59,12 @@ One part of the solution is _replicable research workflows_.  The key benefits:
 
 This presentation: tips on how to make this part of your workflow, and eliminate the drawback.
 
-## The Replicable Workflow
+## The Replicable Workflow 
 
 
 ```{mermaid}
 %%| fig-width: 10
-%%| fig-height: 6
+%%| fig-height: 5
  
 flowchart LR
     A[(Raw Data)] --> B[Data Clean-up] 
@@ -129,7 +129,7 @@ In `conda`, you create virtual environments into which you can install software.
 * Packages come from **channels** which are online repositories hosted by Anaconda or the community (or you!)
 * You **activate** environments to switch into them and then launch software from inside them
 
-## Key `conda` Commands
+## Key `conda` Commands {.smaller}
 
 * `conda create --name MYENV`
   * Make a new, empty, environment
@@ -321,7 +321,7 @@ gitGraph
 
 <https://dangitgit.com/en>
 
-## Key Pitfalls
+## Key Pitfalls {.smaller}
 
 * Watch out for **binary files** such as large images or compiled programs.
   * Binaries, by their very nature, cannot form simple _diffs_ which means if they are included in a `git` repo they can increase its size exponentially
@@ -342,7 +342,7 @@ Conceptually, this should not matter: _but_ sometimes it does^[Every wonder why 
 
 * The solution is to use **continuous integration and continuous deployment** tools to build and produce all of your work in the cloud.
 
-## Server Deployment
+## Server Deployment {.smaller}
 
 To do this, you need a server - but fortunately, GitHub and GitLab exist, and are free.
 
