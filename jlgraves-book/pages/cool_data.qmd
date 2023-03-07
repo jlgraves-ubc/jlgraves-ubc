@@ -81,7 +81,9 @@ Just like this!
 
  * **World Bank Data**: all of the world bank's development indicators, and data from their many surveys they've collected over the years <https://data.worldbank.org/>
 
->  They also have a STATA interface, where you can import the data directly into STATA once you know the variables you want: <https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-data>
+>  They also have a STATA interface, where you can import the data directly into STATA once you know the variables you want.  See the [documentation](https://datahelpdesk.worldbank.org/knowledgebase/articles/889464-wbopendata-stata-module-to-access-world-bank-data)
+>
+> They also have an even better R package (`wbstats`) with some very solid [documentation](https://cran.r-project.org/web/packages/wbstats/vignettes/wbstats.html)
 
 * **CANSIM**:  StatsCanada's macroeconomic and financial database.  If you're looking for Canadian macro data, here's the source - <https://www150.statcan.gc.ca/n1/en/type/data>
 
@@ -89,6 +91,10 @@ Just like this!
 > If you use R the excellent `cansim` package does this too: <https://mountainmath.github.io/cansim/>
 
 * **FRED**: the US Federal Reserve's main economic database for macro statistics; includes other countries as well, and is very easy to use <https://fred.stlouisfed.org/>
+
+> What do you know, there's an R package for FRED too: [`fredr`](https://cran.r-project.org/web/packages/fredr/vignettes/fredr.html)
+
+
 * **Penn World Tables**: the "gold standard" for development macrodata, especially involving productivity <https://www.rug.nl/ggdc/productivity/pwt/>
 
 # Sports Data
