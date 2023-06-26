@@ -102,7 +102,7 @@
     "href": "pages/replicable/replicable_research_slides.html#the-replicable-workflow",
     "title": "Replicable Research in Economics",
     "section": "The Replicable Workflow",
-    "text": "The Replicable Workflow\n\n\n\n\n \nflowchart LR\n    A[(Raw Data)] --> B[Data Clean-up] \n    B --> C{Analysis}\n    C --> D(Main Results) --- P>Paper]\n    C --> E(Appendix Results)\n    E --- Q>Appendices]\n\n\n\n\n\n\n\n\nEach step here should be documented and replicable."
+    "text": "The Replicable Workflow\n\n\n\n\n \nflowchart LR\n    A[(Raw Data)] --&gt; B[Data Clean-up] \n    B --&gt; C{Analysis}\n    C --&gt; D(Main Results) --- P&gt;Paper]\n    C --&gt; E(Appendix Results)\n    E --- Q&gt;Appendices]\n\n\n\n\n\nEach step here should be documented and replicable."
   },
   {
     "objectID": "pages/replicable/replicable_research_slides.html#what-is-environment-management",
@@ -158,7 +158,7 @@
     "href": "pages/replicable/replicable_research_slides.html#sharing-conda-environments",
     "title": "Replicable Research in Economics",
     "section": "Sharing conda Environments",
-    "text": "Sharing conda Environments\nOkay, you’ve done a bunch of stuff. You want to send your code and workflow to your PI. How do you do that?\nconda activate R-env\nconda env export > r-environment.yml\nThen on the other computer, you just do:\nconda env create -f r-environment.yml"
+    "text": "Sharing conda Environments\nOkay, you’ve done a bunch of stuff. You want to send your code and workflow to your PI. How do you do that?\nconda activate R-env\nconda env export &gt; r-environment.yml\nThen on the other computer, you just do:\nconda env create -f r-environment.yml"
   },
   {
     "objectID": "pages/replicable/replicable_research_slides.html#pitfalls-and-problems",
