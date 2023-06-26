@@ -70,6 +70,7 @@ Just like this!
   * There are two formats available on their direct download site (SAS and `csv`) and a data picker if you know what you already want.  The data is also available in aggregate national and state-level forms.
   * You can find [https://www.census.gov/programs-surveys.html](all Census data products here)
   * See also the R `acs` package: <https://cran.r-project.org/web/packages/acs/acs.pdf>
+* **Socioeconomic High-resolution Rural-Urban Geographic Platform for India (SHRUG)**: a very large set of very detailed data covering India.  Covers 500,000 villages and 8000 towns over 25 years, all with common geographic identifiers.  <https://www.devdatalab.org/shrug>
 
 # Geospatial and City-specific Data
 
