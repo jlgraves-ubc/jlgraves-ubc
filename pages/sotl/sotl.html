@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2023-06-28">
 <meta name="keywords" content="Jonathan Graves, resources, UBC, learning, research, GitHub">
 
-<title>Jonathan Graves – Jonathan Graves - GitHub</title>
+<title>SoTL Journals – Jonathan Graves - GitHub</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,21 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -66,10 +70,68 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-journals .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
-<meta name="twitter:title" content="Jonathan Graves - GitHub - Jonathan Graves">
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-topics','listing-impact_factor',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-topics","listing-categories","listing-impact_factor","listing-citescore","listing-href","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-journals'] = new List('listing-journals', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta name="twitter:title" content="Jonathan Graves - GitHub - SoTL Journals">
 <meta name="twitter:description" content="Personal website for Jonathan’s GitHub projects and other miscellaneous stuff">
 <meta name="twitter:card" content="summary">
 </head>
@@ -81,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Jonathan Graves - GitHub</span>
     </a>
   </div>
@@ -97,11 +159,11 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-resources">    
         <li>
-    <a class="dropdown-item" href="./pages/cool_data.html">
+    <a class="dropdown-item" href="../../pages/cool_data.html">
  <span class="dropdown-text">Cool Data Resources</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./pages/replicable/replicable_research_slides.html">
+    <a class="dropdown-item" href="../../pages/replicable/replicable_research_slides.html">
  <span class="dropdown-text">Replicable Research in Economics</span></a>
   </li>  
     </ul>
@@ -109,7 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -130,61 +192,165 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<div class="quarto-about-jolla column-page">
-  <img src="media/profile.png" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Jonathan Graves</h1>
+<h1 class="title">SoTL Journals</h1>
 </div>
+
+
+
 <div class="quarto-title-meta column-page">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">28 June 2023</p>
+    </div>
   </div>
+  
+    
+  </div>
+  
+
 <div>
   <div class="keywords">
     <div class="block-title">Keywords</div>
     <p>Jonathan Graves, resources, UBC, learning, research, GitHub</p>
   </div>
 </div>
-</header><main class="content column-page" id="quarto-document-content">
-<section id="welcome-to-my-github-homepage" class="level1">
-<h1>Welcome to my GitHub Homepage!</h1>
-<p>This is a small repository to allow open access to some of my teaching and data curation resources. I’m slowly migrating and adding files to this, so keep an eye out.</p>
-<p>You can email me at <a href="jonathan.graves@ubc.ca">jonathan.graves@ubc.ca</a></p>
-<div class="align-left callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+
+</header>
+
+
+<p>quarto-listing-table table table-striped</p>
+<div id="listing-journals" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-journals-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-journals'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Journal
+        </option>
+         <option value="listing-topics" data-direction="asc">
+          Topics
+        </option>
+         <option value="listing-impact_factor" data-direction="asc">
+          IF
+        </option>
+         <option value="listing-description" data-direction="asc">
+          Description
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>Looking for the <a href="https://comet.arts.ubc.ca/">COMET project</a>? Or the <a href="https://github.com/ubcecon/comet-project">repo</a>?</li>
-<li>You may also want to check out my <a href="https://github.com/jlgraves-ubc/workshops">online workshops</a></li>
-<li>Or my <a href="https://github.com/jlgraves-ubc/forms">Quarto extensions</a>!</li>
-<li>Or you can check out my <a href="https://jonathanlgraves.arts.ubc.ca/">faculty web-page</a></li>
-</ul>
+<table class="quarto-listing-table table table-striped">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Journal</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Description</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-topics" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Topics</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-impact_factor" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">IF</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="higher education,sotl" data-listing-date-sort="1687935600000" data-listing-title-sort="[Research in Higher Education](https://www.springer.com/journal/11162)">
+<td>
+<span class="listing-title"><a href="https://www.springer.com/journal/11162">Research in Higher Education</a></span>
+</td>
+<td>
+<span class="listing-description">Has particular interest in studies that apply advanced quantitative research methods to issues in postsecondary education or address postsecondary education policy issues.</span>
+</td>
+<td>
+<span class="listing-topics">education, evaluation</span>
+</td>
+<td>
+<span class="listing-impact_factor">2.615</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="education,evaluation" data-listing-date-sort="1687935600000" data-listing-title-sort="[Studies in Educational Evaluation](https://www.sciencedirect.com/journal/studies-in-educational-evaluation)">
+<td>
+<span class="listing-title"><a href="https://www.sciencedirect.com/journal/studies-in-educational-evaluation">Studies in Educational Evaluation</a></span>
+</td>
+<td>
+<span class="listing-description">Studies in Educational Evaluation publishes original reports of evaluation studies: empirical evaluation studies, theoretical reflections, and rticles summarizing the state-of-the-art</span>
+</td>
+<td>
+<span class="listing-topics">education, evaluation</span>
+</td>
+<td>
+<span class="listing-impact_factor">4.017</span>
+</td>
+</tr>
+<tr data-index="2" data-categories="higher education,sotl" data-listing-date-sort="1687935600000" data-listing-title-sort="[Studies in Higher Education ](https://www.tandfonline.com/journals/cshe20)">
+<td>
+<span class="listing-title"><a href="https://www.tandfonline.com/journals/cshe20">Studies in Higher Education</a></span>
+</td>
+<td>
+<span class="listing-description">Welcomes contributions that seek to enhance understanding of higher education policy, institutional management and performance, teaching and learning, and the contribution of higher education to society and the economy.</span>
+</td>
+<td>
+<span class="listing-topics">higher education, sotl</span>
+</td>
+<td>
+<span class="listing-impact_factor">4.017</span>
+</td>
+</tr>
+<tr data-index="3" data-categories="higher education,sotl" data-listing-date-sort="1687935600000" data-listing-title-sort="[Teaching &amp; Learning Inquiry](https://journalhosting.ucalgary.ca/index.php/TLI/about)">
+<td>
+<span class="listing-title"><a href="https://journalhosting.ucalgary.ca/index.php/TLI/about">Teaching &amp; Learning Inquiry</a></span>
+</td>
+<td>
+<span class="listing-description">Teaching &amp; Learning Inquiry publishes scholarly works on the scholarship of teaching and learning (SoTL) in higher education. This includes original research, theory, or commentary and may include empirical and interpretive investigations, theoretical analyses, thought-provoking essays, works about the state of the field, or innovative genres.</span>
+</td>
+<td>
+<span class="listing-topics">higher education, sotl</span>
+</td>
+<td>
+<span class="listing-impact_factor">0.33</span>
+</td>
+</tr>
+<tr data-index="4" data-categories="economics,disciplinary" data-listing-date-sort="1687935600000" data-listing-title-sort="[The Journal of Economic Education](https://www.tandfonline.com/toc/vece20/current)">
+<td>
+<span class="listing-title"><a href="https://www.tandfonline.com/toc/vece20/current">The Journal of Economic Education</a></span>
+</td>
+<td>
+<span class="listing-description">The Journal of Economic Education offers original articles on teaching economics. In its pages, leading scholars evaluate innovations in teaching techniques, materials, and programs.</span>
+</td>
+<td>
+<span class="listing-topics">economics, disciplinary</span>
+</td>
+<td>
+<span class="listing-impact_factor">1.237</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
 </div>
 </div>
 
 
-</section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://jonathanlgraves.arts.ubc.ca/" class="about-link" rel="" target="">
-    <i class="bi bi-book"></i>
-     <span class="about-link-text">UBC Website</span>
-  </a>
-  <a href="https://github.com/jlgraves-ubc/" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">GitHub</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -205,6 +371,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

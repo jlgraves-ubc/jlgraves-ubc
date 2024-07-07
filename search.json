@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Jonathan Graves",
+    "objectID": "pages/sotl/sotl.html",
+    "href": "pages/sotl/sotl.html",
+    "title": "SoTL Journals",
     "section": "",
-    "text": "Welcome to my GitHub Homepage!\nThis is a small repository to allow open access to some of my teaching and data curation resources. I’m slowly migrating and adding files to this, so keep an eye out.\nYou can email me at jonathan.graves@ubc.ca\n\n\n\n\n\n\nTip\n\n\n\n\nLooking for the COMET project? Or the repo?\nYou may also want to check out my online workshops\nOr my Quarto extensions!\nOr you can check out my faculty web-page"
+    "text": "quarto-listing-table table table-striped\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Journal\n        \n         \n          Topics\n        \n         \n          IF\n        \n         \n          Description\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nJournal\n\n\nDescription\n\n\nTopics\n\n\nIF\n\n\n\n\n\n\nResearch in Higher Education\n\n\nHas particular interest in studies that apply advanced quantitative research methods to issues in postsecondary education or address postsecondary education policy issues.\n\n\neducation, evaluation\n\n\n2.615\n\n\n\n\nStudies in Educational Evaluation\n\n\nStudies in Educational Evaluation publishes original reports of evaluation studies: empirical evaluation studies, theoretical reflections, and rticles summarizing the state-of-the-art\n\n\neducation, evaluation\n\n\n4.017\n\n\n\n\nStudies in Higher Education\n\n\nWelcomes contributions that seek to enhance understanding of higher education policy, institutional management and performance, teaching and learning, and the contribution of higher education to society and the economy.\n\n\nhigher education, sotl\n\n\n4.017\n\n\n\n\nTeaching & Learning Inquiry\n\n\nTeaching & Learning Inquiry publishes scholarly works on the scholarship of teaching and learning (SoTL) in higher education. This includes original research, theory, or commentary and may include empirical and interpretive investigations, theoretical analyses, thought-provoking essays, works about the state of the field, or innovative genres.\n\n\nhigher education, sotl\n\n\n0.33\n\n\n\n\nThe Journal of Economic Education\n\n\nThe Journal of Economic Education offers original articles on teaching economics. In its pages, leading scholars evaluate innovations in teaching techniques, materials, and programs.\n\n\neconomics, disciplinary\n\n\n1.237\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "pages/cool_data.html",
@@ -70,6 +70,13 @@
     "text": ":x comment4\nWhen it comes to running more intensive data analysis, I prefer to utilize this API package to receive data. It is directly linked to Statcast data, as well as FanGraphs, which makes it super easy. Also, to my understanding this (and a similar package for Python) are the only methods of retrieving raw play-by-play statcast data, which is necessary in creating advanced models - JS"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Jonathan Graves",
+    "section": "",
+    "text": "Welcome to my GitHub Homepage!\nThis is a small repository to allow open access to some of my teaching and data curation resources. I’m slowly migrating and adding files to this, so keep an eye out.\nYou can email me at jonathan.graves@ubc.ca\n\n\n\n\n\n\nTip\n\n\n\n\nLooking for the COMET project? Or the repo?\nYou may also want to check out my online workshops\nOr my Quarto extensions!\nOr you can check out my faculty web-page"
+  },
+  {
     "objectID": "pages/replicable/replicable_research_slides.html#replicability-in-economics",
     "href": "pages/replicable/replicable_research_slides.html#replicability-in-economics",
     "title": "Replicable Research in Economics",
@@ -102,7 +109,7 @@
     "href": "pages/replicable/replicable_research_slides.html#the-replicable-workflow",
     "title": "Replicable Research in Economics",
     "section": "The Replicable Workflow",
-    "text": "The Replicable Workflow\n\n\n\n\n \nflowchart LR\n    A[(Raw Data)] --&gt; B[Data Clean-up] \n    B --&gt; C{Analysis}\n    C --&gt; D(Main Results) --- P&gt;Paper]\n    C --&gt; E(Appendix Results)\n    E --- Q&gt;Appendices]\n\n\n\n\n\nEach step here should be documented and replicable."
+    "text": "The Replicable Workflow\n\n\n\n\n\n \nflowchart LR\n    A[(Raw Data)] --&gt; B[Data Clean-up] \n    B --&gt; C{Analysis}\n    C --&gt; D(Main Results) --- P&gt;Paper]\n    C --&gt; E(Appendix Results)\n    E --- Q&gt;Appendices]\n\n\n\n\n\n\nEach step here should be documented and replicable."
   },
   {
     "objectID": "pages/replicable/replicable_research_slides.html#what-is-environment-management",
@@ -221,7 +228,7 @@
     "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-1-cloning-and-branching",
     "title": "Replicable Research in Economics",
     "section": "git Workflow Part 1: Cloning and Branching",
-    "text": "git Workflow Part 1: Cloning and Branching\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  merge my_work\n  commit"
+    "text": "git Workflow Part 1: Cloning and Branching\n\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  merge my_work\n  commit"
   },
   {
     "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-2-staging-and-committing",
@@ -235,7 +242,7 @@
     "href": "pages/replicable/replicable_research_slides.html#git-workflow-part-3-pulling-merging-and-pushing",
     "title": "Replicable Research in Economics",
     "section": "git Workflow Part 3: Pulling, Merging, and Pushing",
-    "text": "git Workflow Part 3: Pulling, Merging, and Pushing\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  commit\n  checkout my_work\n  merge main\n  commit\n  checkout main\n  merge my_work\n  commit\n  checkout my_work\n  commit"
+    "text": "git Workflow Part 3: Pulling, Merging, and Pushing\n\n\n\n\n\ngitGraph\n  commit tag: \"clone\"\n  branch my_work\n  commit\n  commit\n  checkout main\n  commit\n  checkout my_work\n  merge main\n  commit\n  checkout main\n  merge my_work\n  commit\n  checkout my_work\n  commit"
   },
   {
     "objectID": "pages/replicable/replicable_research_slides.html#git-workflow-part-4-f-ing-it-up",
@@ -270,6 +277,6 @@
     "href": "pages/replicable/replicable_research_slides.html#references",
     "title": "Replicable Research in Economics",
     "section": "References",
-    "text": "References\n\n\n\n\n\n\n\n\n\nBrodeur, Abel, Mathias Lé, Marc Sangnier, and Yanos Zylberberg. 2016. “Star Wars: The Empirics Strike Back.” American Economic Journal: Applied Economics 8 (1): 1–32.\n\n\nChristensen, Garret, and Edward Miguel. 2018. “Transparency, Reproducibility, and the Credibility of Economics Research.” Journal of Economic Literature 56 (3): 920–80.\n\n\nFranco, Annie, Neil Malhotra, and Gabor Simonovits. 2014. “Publication Bias in the Social Sciences: Unlocking the File Drawer.” Science 345 (6203): 1502–5.\n\n\nIoannidis, John PA. 2005. “Why Most Published Research Findings Are False.” PLoS Medicine 2 (8): e124."
+    "text": "References\n\n\n\n\n\n\n\n\n\n\n\nBrodeur, Abel, Mathias Lé, Marc Sangnier, and Yanos Zylberberg. 2016. “Star Wars: The Empirics Strike Back.” American Economic Journal: Applied Economics 8 (1): 1–32.\n\n\nChristensen, Garret, and Edward Miguel. 2018. “Transparency, Reproducibility, and the Credibility of Economics Research.” Journal of Economic Literature 56 (3): 920–80.\n\n\nFranco, Annie, Neil Malhotra, and Gabor Simonovits. 2014. “Publication Bias in the Social Sciences: Unlocking the File Drawer.” Science 345 (6203): 1502–5.\n\n\nIoannidis, John PA. 2005. “Why Most Published Research Findings Are False.” PLoS Medicine 2 (8): e124."
   }
 ]

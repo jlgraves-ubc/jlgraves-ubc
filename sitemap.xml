@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jlgraves-ubc.github.io/jlgraves-ubc/index.html</loc>
-    <lastmod>2023-06-26T20:49:15.699Z</lastmod>
+    <loc>https://jlgraves-ubc.github.io/jlgraves-ubc/pages/sotl/sotl.html</loc>
+    <lastmod>2023-06-28T17:27:50.697Z</lastmod>
   </url>
   <url>
     <loc>https://jlgraves-ubc.github.io/jlgraves-ubc/pages/cool_data.html</loc>
-    <lastmod>2023-06-26T20:49:16.379Z</lastmod>
+    <lastmod>2023-06-26T20:47:44.734Z</lastmod>
+  </url>
+  <url>
+    <loc>https://jlgraves-ubc.github.io/jlgraves-ubc/index.html</loc>
+    <lastmod>2023-02-25T20:58:46.310Z</lastmod>
   </url>
   <url>
     <loc>https://jlgraves-ubc.github.io/jlgraves-ubc/pages/replicable/replicable_research_slides.html</loc>
-    <lastmod>2023-06-26T20:49:17.845Z</lastmod>
+    <lastmod>2023-03-03T16:23:13.994Z</lastmod>
   </url>
 </urlset>
