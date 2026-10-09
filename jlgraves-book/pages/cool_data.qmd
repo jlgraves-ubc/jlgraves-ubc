@@ -38,6 +38,8 @@ Just like this!
 
 > <https://github.com/fivethirtyeight/russian-troll-tweets/> (user-friendlier versions and ideas here)
 
+* **NotPanel SMM Price Index**: data on social media paid followers, likes, etc.  Figure out how expensive it is to become e-famous.  <https://notpanel.com/smm-price-index>
+
 
 # Business, Internet, Web 2.0-ish
 
