@@ -104,7 +104,7 @@ Just like this!
 Sports sports sports sports!   A big thank-you to my student [Jack Siemens](https://github.com/jacksiemens), who knows everything about baseball and analytics.  He curated most of this list; I've added his comments in quotes here (as _JS_).
 
  * **NHL Historical Data**: all the "standard" hockey scores for every player and team since 1917.  Figure out what made the Great One so great. <http://www.nhl.com/stats/>
-* ☆ **Football Data**: football fans are the classic fanatics, and they're also fanatic about their data.  Here's a collection of a bunch of different resources.  <https://datahub.io/awesome/football>
+* ☆ **Football Data**: football fans are the classic fanatics, and they're also fanatic about their data.  Here's a collection of a bunch of different resources.  <https://www.football-charts.com/developers>
 * ☆ **Hockey Data**: not to be outdone, the hockey fans have struck back with their own giant list of hockey data.  Take that, soccer people!  [Link](http://www.hockeyabstract.com/thoughts/completelistofhockeyanalyticsdataresources)
 * **Cricsheet**: it's cricket.  I don't know anything about cricket.  Maybe you do.  Maybe you can explain it to me.  <https://cricsheet.org/>
 
